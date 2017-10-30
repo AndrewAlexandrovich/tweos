@@ -1,6 +1,6 @@
 $('a.btn_action').on('click',function(){
-cordova.InAppBrowser.open('http://app.u-lisi.com.ua/', '_blank', 'location=no');
-alert('click to button')
+cordova.InAppBrowser.open('http://app.u-lisi.com.ua/', 'location=no');
+alert('click to button');
 });
 $(document).ready(function(){
 alert('is ready');
