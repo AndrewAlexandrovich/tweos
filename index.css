@@ -1,0 +1,210 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+background: url(../img/back_home.jpg);
+    height: 100%;
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+img.img_top {
+    display: block;
+    margin: 0 auto;
+    padding: 3px;
+    max-width: 100%;
+}
+.top_logo_bg {
+    background: #fff;
+    box-shadow: 0px 7px 12px #FFF;
+}
+.btn_action {
+    background: none repeat scroll 0% 0% #F15A29;
+    float: right;
+    top: calc(50% - 45px);
+    position: fixed;
+    display: block;
+    color: #fff !important;
+    padding: 24px 40px;
+    right: -4px;
+    border: 3px solid #FFF;
+    box-shadow: 0px 3px 3px #301C1C;
+}
+.foot_main_mob {
+    position: fixed;
+    bottom: 0px;
+    display: block;
+    margin: 0 auto;
+    left: calc(50% - 180px);
+	width: 360px;
+}
+.white{color:#fff;}
+.img-responsive{max-width:100%;}
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+/**/
+
+/* Menu */
+ 
+.menu {
+  background: #555;
+  left: -285px; /* прячем меню */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+  z-index:2;
+}
+ 
+ 
+/* Basic CSS */
+ 
+.background {
+  background-image: url('images/chicago-night.jpg'); 
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+ 
+.menu ul {
+  border-top: 1px solid #555;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.menu li {
+  border-bottom: 1px solid #555;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+ 
+.menu li:hover {
+  cursor: pointer;
+  background-color: #555;
+  }
+ 
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+ 
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+ 
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+ 
+.icon-menu img {
+  margin-right: 5px;
+}
+.overlay{
+    background: rgba(5, 4, 6, 0.54);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+	  left: 285px;
+    transition: 0.8s;
+	opacity:0;
+	display:none;
+}
