@@ -21,7 +21,7 @@
     <title>Travel Assurance</title>
 </head>
 
-<body>
+<body onload="init();">
     <div class="app">
  <div class="menu">
         <ul>
@@ -41,6 +41,7 @@
 <a class="btn_action" href="http://app.u-lisi.com.ua/">Connect Now</a>
 </div>
 <a id="ifi" href="http://app.u-lisi.com.ua/">tow button</a>
+<a id="" href="page.html">three button</a>
 <div class="foot_main_mob">
 <div style="width:19%; float:left;">
 <img src="logo.png" class="img-responsive"> 
@@ -107,6 +108,13 @@ $('a.ifi').on('click',function(){
 cordova.InAppBrowser.open('http://app.u-lisi.com.ua/', '_blank', 'location=yes');
 alert('click to button')
 });	
+
+window.addEventListener('load', function () {
+    document.addEventListener('deviceready', function () {
+        alert("PhoneGap is now loaded!");
+    }, false);
+}, false);
+
     </script>
 </body>
 
