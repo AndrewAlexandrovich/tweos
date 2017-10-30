@@ -29,7 +29,7 @@ body {
 
 /* Portrait layout (default) */
 .app {
-background: url(../img/back_home.jpg);
+background: url(back_home.jpg);
     height: 100%;
     display: block;
     position: fixed;
